@@ -134,6 +134,12 @@
                   <button class="button is-warning is-light" id="swarmCheatBtn">Buzz</button>
                 </div>
               </div> <!--end nested-left-column-3-->
+              <div class="column nested" name=""nested-right-column-3">
+                <div class="field" id="powerCheat">
+                  <label class="label">Solve the Energy Crisis</label>
+                  <button class="button is-warning is-light" id="powerCheatBtn" title="Add Mills and turn them on to provide ludicrous amounts of power">Kill Scotty's Excuses</button>
+                </div>
+              </div>
             </div> <!--end nested-columns-2-->
             <hr />
             <div class="columns nested" name="nested-columns-3">
@@ -177,77 +183,6 @@
       </form>
     </div> <!--end container-->
   </section>
-  <script>
-    load(document.getElementById("dataArea"));
-
-    document.addEventListener('error', function(error){
-     reportError(error);
-    });
-
-    document.getElementById("clearBtn").addEventListener("click", function () {
-        clearArea();
-    }, false);
-
-    document.getElementById("allBtn").addEventListener("click", function () {
-        runAll();
-    }, false);
-
-    document.getElementById("decodeBtn").addEventListener("click", function () {
-        decodeArea();
-    }, false);
-
-    document.getElementById("encodeBtn").addEventListener("click", function () {
-        encodeArea();
-    }, false);
-
-    document.getElementById("pasteBtn").addEventListener("click", function () {
-        pasteClipboard();
-    }, false);
-
-    document.getElementById("copyBtn").addEventListener("click", function () {
-        copyClipboard();
-    }, false);
-
-    document.getElementById("buildingCheatBtn").addEventListener("click", function () {
-        buildCheat();
-    }, false);
-
-    document.getElementById("valueCheatBtn").addEventListener("click", function () {
-        valueCheat();
-    }, false);
-
-    document.getElementById("valueMaxCheatBtn").addEventListener("click", function () {
-        valueMaxCheat();
-    }, false);
-
-    document.getElementById("madCheatBtn").addEventListener("click", function () {
-        madCheat();
-    }, false);
-
-    document.getElementById("govCheatBtn").addEventListener("click", function () {
-        govCheat();
-    }, false);
-
-    document.getElementById("craftCheatBtn").addEventListener("click", function () {
-        craftCheat();
-    }, false);
-
-    document.getElementById("coupCheatBtn").addEventListener("click", function () {
-        coupCheat();
-    }, false);
-
-    document.getElementById("swarmCheatBtn").addEventListener("click", function () {
-        swarmCheat();
-    }, false);
-
-    document.getElementById("soldierCheatBtn").addEventListener("click", function () {
-        garrisonCheat();
-    }, false);
-
-    document.getElementById("godsCheatBtn").addEventListener("click", function () {
-      godsCheat();
-    }, false);
-</script>
 </body>
 
 </html>

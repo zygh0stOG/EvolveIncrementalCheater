@@ -204,6 +204,15 @@ function godsCheat() {
     putJSONInTextarea(jdata);
 }
 
+function powerCheat() {
+    let jdata = getTextareaAsJSON();
+
+    jdata.city.mill.count = 50000;
+    jdata.city.mill.on = 49000;
+
+    putJSONInTextarea(jdata);
+}
+
 /* --------------- Helper functions -------------------- */
 function reportError(err, msg) {
     resetStatus();
@@ -247,3 +256,82 @@ function clipboardError(err, msg) {
     document.getElementById("clipboardStatus").innerHTML = msg ? msg : "Clipboard error!";
     // console.error(err);
 }
+
+
+function init() {
+    load(document.getElementById("dataArea"));
+
+    document.addEventListener('error', function(error){
+     reportError(error);
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", function () {
+        clearArea();
+    }, false);
+
+    document.getElementById("allBtn").addEventListener("click", function () {
+        runAll();
+    }, false);
+
+    document.getElementById("decodeBtn").addEventListener("click", function () {
+        decodeArea();
+    }, false);
+
+    document.getElementById("encodeBtn").addEventListener("click", function () {
+        encodeArea();
+    }, false);
+
+    document.getElementById("pasteBtn").addEventListener("click", function () {
+        pasteClipboard();
+    }, false);
+
+    document.getElementById("copyBtn").addEventListener("click", function () {
+        copyClipboard();
+    }, false);
+
+    document.getElementById("buildingCheatBtn").addEventListener("click", function () {
+        buildCheat();
+    }, false);
+
+    document.getElementById("valueCheatBtn").addEventListener("click", function () {
+        valueCheat();
+    }, false);
+
+    document.getElementById("valueMaxCheatBtn").addEventListener("click", function () {
+        valueMaxCheat();
+    }, false);
+
+    document.getElementById("madCheatBtn").addEventListener("click", function () {
+        madCheat();
+    }, false);
+
+    document.getElementById("govCheatBtn").addEventListener("click", function () {
+        govCheat();
+    }, false);
+
+    document.getElementById("craftCheatBtn").addEventListener("click", function () {
+        craftCheat();
+    }, false);
+
+    document.getElementById("coupCheatBtn").addEventListener("click", function () {
+        coupCheat();
+    }, false);
+
+    document.getElementById("swarmCheatBtn").addEventListener("click", function () {
+        swarmCheat();
+    }, false);
+
+    document.getElementById("powerCheatBtn").addEventListener("click", function () {
+        powerCheat();
+    }, false);
+
+    document.getElementById("soldierCheatBtn").addEventListener("click", function () {
+        garrisonCheat();
+    }, false);
+
+    document.getElementById("godsCheatBtn").addEventListener("click", function () {
+        godsCheat();
+    }, false);
+}
+
+window.addEventListener("DOMContentLoaded", function () { init(); }, false);
