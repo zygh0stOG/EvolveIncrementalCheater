@@ -213,6 +213,20 @@ function powerCheat() {
     putJSONInTextarea(jdata);
 }
 
+function templeCheat() {
+    let jdata = getTextareaAsJSON();
+
+    if (jdata.tech.theology < 2) {
+        jdata.tech.theology = 2;
+    }
+
+    if (jdata.city.temple.count < 10000) {
+        jdata.city.temple.count = 10000;
+    }
+    
+    putJSONInTextarea(jdata);
+}
+
 /* --------------- Helper functions -------------------- */
 function reportError(err, msg) {
     resetStatus();
@@ -331,6 +345,10 @@ function init() {
 
     document.getElementById("godsCheatBtn").addEventListener("click", function () {
         godsCheat();
+    }, false);
+
+    document.getElementById("templeCheatBtn").addEventListener("click", function () {
+        templeCheat();
     }, false);
 }
 
